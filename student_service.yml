@@ -1,6 +1,8 @@
 spring:
   application:
     name: student_service
+  config:
+    import: "optional:configserver:http://localhost:8888"
 
   datasource:
     url: jdbc:h2:mem:student-db

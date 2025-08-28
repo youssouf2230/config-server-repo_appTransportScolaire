@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: eureka_server
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+
 
 eureka:
   client:
