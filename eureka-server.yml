@@ -1,18 +1,13 @@
+server:
+  port: 9102
+
 spring:
   application:
-    name: student-service
-server:
-  port: 8082
+    name: eureka_server
+  config:
+    import: optional:configserver:http://localhost:9101
 
 eureka:
   client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-    register-with-eureka: true
-    fetch-registry: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+    register-with-eureka: false
+    fetch-registry: false

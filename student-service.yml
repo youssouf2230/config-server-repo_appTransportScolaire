@@ -1,6 +1,11 @@
 spring:
   application:
-    name: student-service
+    name: student_service
+  datasource:
+    url: jdbc:h2:mem:student-db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
 server:
   port: 8082
 
