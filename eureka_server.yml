@@ -5,10 +5,9 @@ spring:
   application:
     name: eureka_server
   config:
-    import: "optional:configserver:http://localhost:8889"
+    import: optional:configserver:http://localhost:8889
 
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-
